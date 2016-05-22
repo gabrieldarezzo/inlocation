@@ -61,12 +61,15 @@ Este plugin esta licenciado como GPL.
 Conta google com uma Api-KEY -> https://developers.google.com/maps/documentation/javascript/get-api-key
 
 ## Screenshots ##
+
+
+### 1. Configurações do plugin. ###
 1. Cadastro de Local.  
-![Cadastro de Local](https://ps.w.org/inlocation/assets/screenshot-1.png?rev=1415968)
+![1 Cadastro de Local](http://ps.w.org/inlocation/assets/screenshot-1.png)
 2. Listagem dos Locais.  
-![Listagem dos Locais](https://ps.w.org/inlocation/assets/screenshot-2.png?rev=1415968)
+![2 Listagem dos Locais](http://ps.w.org/inlocation/assets/screenshot-2.png)
 3. Simulação do Mapa, e exibição do ShortCode.  
-![Simulação do Mapa, e exibição do ShortCode](https://ps.w.org/inlocation/assets/screenshot-3.png?rev=1415968)
+![3 Simulação do Mapa, e exibição do ShortCode](http://ps.w.org/inlocation/assets/screenshot-3.png)
 
 
 ## Changelog ##
