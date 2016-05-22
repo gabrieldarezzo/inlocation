@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: inlocation\n"
+"POT-Creation-Date: 2016-05-08 11:28-0300\n"
+"PO-Revision-Date: 2016-05-08 11:32-0300\n"
+"Language-Team: inworkteam <gabrieldarezzo@yahoo.com.br>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"Last-Translator: Gabriel Darezzo <gabrieldarezzo@yahoo.com.br>\n"
+"Language: pt_BR\n"
+"X-Poedit-SearchPath-0: inlocation.php\n"
+
+#: inlocation.php:40 inlocation.php:56 inlocation.php:113 inlocation.php:177
+msgid "Settings"
+msgstr "Configurações"
+
+#: inlocation.php:53 inlocation.php:106 inlocation.php:153
+msgid "Register Location"
+msgstr "Cadastrar Localização"
+
+#: inlocation.php:54
+msgid "Listing"
+msgstr "Listagem"
+
+#: inlocation.php:55
+msgid "Simulate Map"
+msgstr "Simular Map"
+
+#: inlocation.php:81
+msgid "No action correct."
+msgstr "Url não encontrada"
+
+#: inlocation.php:106 inlocation.php:153
+msgid "You need register a location"
+msgstr "Você precisa cadastar ao menos um local"
+
+#: inlocation.php:113 inlocation.php:177
+msgid "You need a Google API, Go in \"Settings\""
+msgstr "You need a Google API, Go in \"Settings\""
+
+#: inlocation.php:160
+msgid "Locations:"
+msgstr "Localizações:"
+
+#: inlocation.php:194
+msgid "Zip Code Empty"
+msgstr "Cep Vazio."
+
+#: inlocation.php:198
+msgid "Number Empty"
+msgstr "Informe o Número"
+
+#: inlocation.php:232
+msgid "Enter the location"
+msgstr "Informe a Localização"
+
+#: inlocation.php:234
+msgid "Zip code"
+msgstr "Cep"
+
+#: inlocation.php:237
+msgid "Street Name"
+msgstr "Nome do Endereço"
+
+#: inlocation.php:240
+msgid "Neighborhood"
+msgstr "Bairro"
+
+#: inlocation.php:243
+msgid "City"
+msgstr "Cidade"
+
+#: inlocation.php:246
+msgid "State"
+msgstr "Estado"
+
+#: inlocation.php:249
+msgid "Number"
+msgstr "Número"
+
+#: inlocation.php:253
+msgid "Add Location"
+msgstr "Adicionar Localização"
+
+#: inlocation.php:292
+msgid "Enter your Google api-key!"
+msgstr "Informe sua Google-API Key"
+
+#: inlocation.php:298
+msgid "You can create Google Api-KEY in this link,"
+msgstr "Você pode criar sua Google-Api Key neste link,"
+
+#: inlocation.php:300
+msgid "Update API"
+msgstr "Atualizar API"
+
+#: inlocation.php:345 inlocation.php:372
+msgid "You do not have permission to perform this!"
+msgstr "Você não tem permissão para efetuar isto!"
+
+#: inlocation.php:361
+msgid "Addresses sequence updated!"
+msgstr "Ordem dos endereços atualizada."
+
+#: inlocation.php:430
+msgid "ZipCode Not Found"
+msgstr "Cep não encontrado"
+
+#: inlocation.php:431
+msgid "Error"
+msgstr "Ops... Ocorreu um erro."
+
+#: inlocation.php:432
+msgid "Are you sure?"
+msgstr "Você tem certeza?"

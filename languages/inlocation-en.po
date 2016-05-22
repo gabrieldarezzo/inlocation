@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: inlocation\n"
+"POT-Creation-Date: 2016-05-08 11:28-0300\n"
+"PO-Revision-Date: 2016-05-08 11:28-0300\n"
+"Last-Translator: Gabriel Darezzo <gabrieldarezzo@yahoo.com.br>\n"
+"Language-Team: inworkteam <gabrieldarezzo@yahoo.com.br>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: inlocation.php\n"
+
+#: inlocation.php:40 inlocation.php:56 inlocation.php:113 inlocation.php:177
+msgid "Settings"
+msgstr "Settings"
+
+#: inlocation.php:53 inlocation.php:106 inlocation.php:153
+msgid "Register Location"
+msgstr "Register Location"
+
+#: inlocation.php:54
+msgid "Listing"
+msgstr "Listing"
+
+#: inlocation.php:55
+msgid "Simulate Map"
+msgstr "Simulate Map"
+
+#: inlocation.php:81
+msgid "No action correct."
+msgstr "No action correct."
+
+#: inlocation.php:106 inlocation.php:153
+msgid "You need register a location"
+msgstr "You need register a location"
+
+#: inlocation.php:113 inlocation.php:177
+msgid "You need a Google API, Go in \"Settings\""
+msgstr "You need a Google API, Go in \"Settings\""
+
+#: inlocation.php:160
+msgid "Locations:"
+msgstr "Locations:"
+
+#: inlocation.php:194
+msgid "Zip Code Empty"
+msgstr "Zip Code Empty"
+
+#: inlocation.php:198
+msgid "Number Empty"
+msgstr "Number Empty"
+
+#: inlocation.php:232
+msgid "Enter the location"
+msgstr "Enter the location"
+
+#: inlocation.php:234
+msgid "Zip code"
+msgstr "Zip code"
+
+#: inlocation.php:237
+msgid "Street Name"
+msgstr "Street Name"
+
+#: inlocation.php:240
+msgid "Neighborhood"
+msgstr "Neighborhood"
+
+#: inlocation.php:243
+msgid "City"
+msgstr "City"
+
+#: inlocation.php:246
+msgid "State"
+msgstr "State"
+
+#: inlocation.php:249
+msgid "Number"
+msgstr "Number"
+
+#: inlocation.php:253
+msgid "Add Location"
+msgstr "Add Location"
+
+#: inlocation.php:292
+msgid "Enter your Google api-key!"
+msgstr "Enter your Google api-key!"
+
+#: inlocation.php:298
+msgid "You can create Google Api-KEY in this link,"
+msgstr "You can create Google Api-KEY in this link,"
+
+#: inlocation.php:300
+msgid "Update API"
+msgstr "Update API"
+
+#: inlocation.php:345 inlocation.php:372
+msgid "You do not have permission to perform this!"
+msgstr "You do not have permission to perform this!"
+
+#: inlocation.php:361
+msgid "Addresses sequence updated!"
+msgstr "Addresses sequence updated!"
+
+#: inlocation.php:430
+msgid "ZipCode Not Found"
+msgstr "ZipCode Not Found"
+
+#: inlocation.php:431
+msgid "Error"
+msgstr "Error"
+
+#: inlocation.php:432
+msgid "Are you sure?"
+msgstr "Are you sure?"

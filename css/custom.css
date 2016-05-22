@@ -1,0 +1,57 @@
+#inlocationadm-menu{
+    padding: 5px;
+    padding-top: 15px;	
+    padding-bottom: 0px;	
+	
+	
+	font-size: 16px;
+}
+
+.two-columns{
+	float: left;
+	width: 50%;
+	height: 460px;
+}
+
+.sortable {
+	list-style-type: none;
+	padding: 0;
+	width: 100%;
+	min-width: 500px;
+	/* margin: 11px; */
+}
+
+.sortable li { 
+	margin: 0 3px 3px 3px;
+	padding: 0.4em;
+	padding-left: 1.5em;
+	font-size: 1.4em;
+	/* height: 18px; */
+	cursor: move;
+}
+
+.sortable li span { 
+	position: absolute;
+	margin-left: -1.3em;
+}
+
+#map { 
+	height: 100%;
+	width: 100%;
+}
+
+.two-columns p{
+	padding: 0px;
+    margin: 0px;
+}
+
+.menu-expand{
+	float: right;
+	cursor: pointer;
+}
+
+#inworkadm-menu{
+	padding: 5px;
+	margin: 5px;
+	
+}
