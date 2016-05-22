@@ -1,14 +1,14 @@
 # InLocation #
-**Contributors: gabrieldarezzo   
-**Donate link: http://inwork.com.br/site/novo/  
-**Tags: googlemap, googleapis, location  
-**Requires at least: 3.5  
-**Tested up to: 3.5  
-**Stable tag: 4.5  
-**License: GPLv2 or later  
-**License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+**Contributors:** gabrieldarezzo   
+**Donate link:** http://inwork.com.br/site/novo/  
+**Tags:** googlemap, googleapis, location  
+**Requires at least:** 3.5  
+**Tested up to:** 3.5  
+**Stable tag:** 4.5  
+**License:** GPLv2 or later  
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
-# Create a map in GoogleMaps with location you want (marks), show with shortcode #
+Create a map in GoogleMaps with location you want (marks), show with shortcode
 
 ## Description ##
 
@@ -16,13 +16,12 @@
 
 ### Descrição em Português: ###
 * **Crie uma lista de localizações e exiba no mapa do GoogleMaps por shortcode**
+* **Cadastro:** Cadastre uma localização (Utiliza-se um WebService para facilitar o cadastro **Busca por cep**)  
+* **Listagem:** Lista todos os endereços cadastrados com a opção de exclusão
+* **Simulação:** Simula o mapa (GoogleMaps) com as marcações físicas, e o atalho do shortcode para incorporar a pagina desejada.
+* **Configurações:** Manipule sua Google-API
 
-**Cadastro:** Cadastre uma localização (Utiliza-se um WebService para facilitar o cadastro **Busca por cep**)  
-**Listagem:** Lista todos os endereços cadastrados com a opção de exclusão
-**Simulação:** Simula o mapa (GoogleMaps) com as marcações físicas, e o atalho do shortcode para incorporar a pagina desejada.
-**Configurações:** Manipule sua Google-API
-
-# Agradecimentos #
+## Agradecimentos ##
 * Ravi Darezzo criação do banner e ícones.
 	
 
@@ -42,7 +41,7 @@
 * Acesse o menu lateral 'InLocation'
 * Clique em 'Configurações' e atualize sua Google-API
 
-# Frequently Asked Questions #
+## Frequently Asked Questions ##
 
 ### What is the plugin license? ###
 

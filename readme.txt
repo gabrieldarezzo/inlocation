@@ -27,7 +27,9 @@ Crie uma lista de localizações e exiba no mapa do GoogleMaps por shortcode
 = Agradecimentos =
 * Ravi Darezzo criação do banner e ícones.
 	
+= Contribute =
 
+You can contribute to the source code in our [GitHub](https://github.com/gabrieldarezzo/inlocation/) page.
 
 
 == Installation ==
