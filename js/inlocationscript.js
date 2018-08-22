@@ -1,6 +1,10 @@
 (function($) {
 	$(document).ready(function() {
 		
+		$("#icon_id").imagepicker();
+		
+		
+		
 		$(".menu-expand").bind( "click", function() {
 			
 			var $li_this = $(this).parent();

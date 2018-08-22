@@ -1,10 +1,11 @@
 === InLocation ===
 Contributors: gabrieldarezzo
-Donate link: http://inwork.com.br/site/novo/
+Donate link: https://inwork.com.br/
 Tags: googlemap, googleapis, location
 Requires at least: 3.5
-Tested up to: 3.5
+Tested up to: 4.8.2
 Stable tag: 4.5
+Requires PHP: 5.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,14 +70,13 @@ Este plugin esta licenciado como GPL.
 
 == Screenshots ==
 1. Cadastro de Local.
-2. Listagem dos Locais.
+2. Ícones e mais Ícones
 3. Simulação do Mapa, e exibição do ShortCode.
 
 
 == Changelog ==
-1.2 Improve generic function, defines and scripts 
-
-
-== Upgrade Notice ==
+1.8 Remove Bug of 'Edit Post', now has a specific jQuery selector
+1.6 Add Icons (https://mapicons.mapsmarker.com) + Plugin (image-picker)
 1.1 Fix SQL Injection with prepared 
+1.2 Improve generic function, defines and scripts 
 1.0 ShortCode add

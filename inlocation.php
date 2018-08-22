@@ -5,7 +5,7 @@ Text Domain: inlocation
 Description: Plugin para criar um Mapa (via GoogleMaps) com seu endereço fisico por CEPs
 Author: Gabriel Darezzo
 Domain Path: /languages
-Version: 1.5
+Version: 1.8
 Author URI: http://github.com/gabrieldarezzo
 */
 
@@ -91,6 +91,7 @@ function inlocation_map_deps(){
 		 CONCAT(logr_end, ' ', logr_bairro, ' (', logr_cidade, ') - ', logr_estado) AS title
 		,lat 
 		,lng
+		,icon_id
 	from {$tbl} order by show_order", OBJECT);
 	
 	
@@ -157,7 +158,7 @@ function inlocation_listagem_cep(){
 		echo '<ul id="custom-type-list" class="sortable">';
 		foreach($lugares as $lugar){
 			echo "<li class='ui-state-default' id='{$lugar->id}'>";
-				echo "<span class='ui-icon ui-icon-arrowthick-2-n-s'></span>({$lugar->id}) Cep: <strong>{$lugar->title}</strong> | Nr: <strong>{$lugar->logr_nr}</strong> ";
+				echo "<span class='ui-icon ui-icon-arrowthick-2-n-s'></span>({$lugar->id}) <strong>{$lugar->title}</strong> | Nr: <strong>{$lugar->logr_nr}</strong> ";
 				echo '<div class="menu-expand"><span style="float: right;" title="Excluir localização" class="dashicons dashicons-trash"></span></div> ';
 			echo '</li>';
 		}
@@ -184,6 +185,10 @@ function inlocation_cad_cep(){
 		$logr_cidade= @$_POST['logr_cidade'];
 		$logr_estado= @$_POST['logr_estado'];
 		$show_order = @$_POST['show_order'];
+		$icon_id 	= @$_POST['icon_id'];
+		
+		
+		
 		
 		if($cep == ''){
 			die(__( 'Zip Code Empty', 'inlocation'));
@@ -206,7 +211,7 @@ function inlocation_cad_cep(){
 		//Insert
 		$sql = "";
 		  
-		$wpdb->query( $wpdb->prepare("INSERT INTO {$tbl} (cep, logr_nr, logr_end, logr_bairro, logr_cidade, logr_estado, lat, lng) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+		$wpdb->query( $wpdb->prepare("INSERT INTO {$tbl} (cep, logr_nr, logr_end, logr_bairro, logr_cidade, logr_estado, lat, lng, icon_id) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 			,array(
 				 $cep
 				,$logr_nr
@@ -216,9 +221,38 @@ function inlocation_cad_cep(){
 				,$logr_estado
 				,$lat
 				,$lng
+				,$icon_id
 			) 
 		));
 	}
+
+
+	$pathIcons = plugin_dir_path(__FILE__) . 'images/icon/';	
+	$icons = [];
+	foreach(glob($pathIcons . '*.*')  as $iconFile) {
+		$sanitizedIcon = str_replace($pathIcons, '', $iconFile);		
+		$icons[] = $sanitizedIcon;		
+	}
+	
+	
+	$select_icons = '<select id="icon_id" name="icon_id" class="image-picker show-html">';
+	
+	$select_icons .= '<option data-img-src="' .plugin_dir_url(__FILE__) . 'images/icon/spotlight-poi.png" value="spotlight-poi.png">spotlight-poi.png</option>';
+	
+	foreach($icons as $icon){
+		if($icon == '_readme-license.txt') continue;
+		
+		$select_icons .= '<option data-img-src="' .plugin_dir_url(__FILE__) . 'images/icon/' . $icon . '" value="' . $icon . '">'. $icon . '</option>';
+		/*
+		if($icon == 'schools_maps.png'){
+			$select_icons .= '<option data-img-src="' .plugin_dir_url(__FILE__) . 'images/icon/' . $icon . '" value="' . $icon . '">'. $icon . '</option>';
+		} else {
+			$select_icons .= '<option selected data-img-src="' .plugin_dir_url(__FILE__) . 'images/icon/' . $icon . '" value="' . $icon . '">'. $icon . '</option>';
+		}
+		*/
+		
+	}
+	$select_icons .= '</select>';
 	
 	echo "
 	<div class='wrap'>
@@ -242,13 +276,15 @@ function inlocation_cad_cep(){
 			
 			<p>". __( 'Number', 'inlocation' )."</p>
 			<input type='text' name='logr_nr' id='logr_nr' />
+			
+			
+			<h2>". __( 'Icons', 'inlocation' )."</h2>
+			{$select_icons}
+			
 			<br />
 			
 			<input value='". __( 'Add Location', 'inlocation' )."' name='bbuinfo_config_submit' type='submit' />
 		</form>
-	
-		
-		
 	</div>";
 }
 
@@ -316,6 +352,7 @@ function inlocation_activate(){
 		,lat			varchar(200)
 		,lng			varchar(200)
 		,show_order 	INT(4)
+		,icon_id		varchar(200)
 	)Engine=InnoDb";
 	
 	$wpdb->query($sql);
@@ -414,9 +451,11 @@ add_shortcode( 'inlocation_map', 'inlocation_map_shortcode' );
 
 
 function inlocation_enqueue_scripts_styles(){
+	wp_enqueue_style('image-picker-css', plugin_dir_url(__FILE__) . 'js/plugins/image-picker/image-picker.css');
 	wp_enqueue_style('jquery-ui-css', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 	wp_enqueue_style('custom', plugin_dir_url(__FILE__) . 'css/custom.css', array('jquery-ui-css'));
 
+	wp_enqueue_script('image-picker', plugin_dir_url(__FILE__) . 'js/plugins/image-picker/image-picker.min.js', array('jquery'));
 	wp_enqueue_script('maskedinput', plugin_dir_url(__FILE__) . 'js/plugins/maskedinput/jquery.maskedinput.js', array('jquery'));
 	
 	wp_enqueue_script('inlocationscript', plugin_dir_url(__FILE__) . 'js/inlocationscript.js', array('jquery', 'jquery-ui-sortable', 'maskedinput'));
