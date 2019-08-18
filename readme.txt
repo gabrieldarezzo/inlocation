@@ -3,7 +3,7 @@ Contributors: gabrieldarezzo
 Donate link: https://inwork.com.br/
 Tags: googlemap, googleapis, location
 Requires at least: 3.5
-Tested up to: 4.8.2
+Tested up to: 5.2.2
 Stable tag: 4.5
 Requires PHP: 5.4
 License: GPLv2 or later

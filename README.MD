@@ -4,15 +4,6 @@ Funcionalidades:
 
 
 
-key:
-```
-AIzaSyCRvxBCNfltzBQgBHpHtHm0sc4GtP-fPsE
-```
-
-```
-AIzaSyC-9XzfWIRagerL60bVUzOpPlpZgmL-4n0
-```
-
 Testar URL:
 http://maps.googleapis.com/maps/api/geocode/json?address=Rua+Isidoro+Favaro,44+São+Paulo&key=AIzaSyCRvxBCNfltzBQgBHpHtHm0sc4GtP-fPsE
 http://maps.googleapis.com/maps/api/geocode/json?address=Rua+Isidoro+Favaro,44+São+Paulo&key=AIzaSyCRvxBCNfltzBQgBHpHtHm0sc4GtP-fPsE
