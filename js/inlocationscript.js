@@ -1,21 +1,21 @@
 (function($) {
 	$(document).ready(function() {
-		
+
 		$("#icon_id").imagepicker();
-		
-		
-		
+
+
+
 		$(".menu-expand").bind( "click", function() {
-			
+
 			var $li_this = $(this).parent();
 			var idx = $(this).parent().attr('id');
-			
+
 			var conf = confirm(inlocation_def.confirm_delete);
 			if(!conf){
 				return false;
 			}
-			
-			
+
+
 			var loaderContainer = $( '<span/>', {
 				 'class': 'loader-image-container'
 				,'id'	: 'ajax-img'
@@ -24,8 +24,8 @@
 				src: inlocation_def.path_admin + 'images/loading.gif',
 				'class': 'loader-image'
 			}).appendTo( loaderContainer );
-			
-			
+
+
 			$.ajax({
 				 url: ajaxurl
 				,type:'POST'
@@ -37,20 +37,20 @@
 				,success: function(json){
 					$('#ajax-img').remove();
 					$li_this.hide();
-					
+
 				},error: function(json){
 					$('#ajax-img').remove();
-					
+
 				},beforeSend(){
-					
+
 				}
 			}); //End_ajax
 		});
-		
+
 		// var sortList  = $('#custom-type-list');
 		var animation = $('#loading-animation');
 		var pageTitle = $('#lugares');
-		
+
 		$('#custom-type-list').sortable({
 			update: function(event, ui){
 				var loaderContainer = $( '<span/>', {
@@ -61,7 +61,7 @@
 					src: inlocation_def.path_admin + 'images/loading.gif',
 					'class': 'loader-image'
 				}).appendTo( loaderContainer );
-				
+
 				$.ajax({
 					 url: ajaxurl
 					,type:'POST'
@@ -72,7 +72,7 @@
 					}
 			 		,success: function(json){
 						$('#ajax-img').remove();
-						
+
 						if(!json.success){
 							//Msg erro
 							pageTitle.after('<div id="msg-ajax" class="error"><p>' + json.data + '</p></div>');
@@ -89,17 +89,17 @@
 				}); //End_ajax
 			}
 		});
-		
+
 		//begin_get_location
-		
+
 		var cep_type = '99999-999'; //Varia de Pais pra pais
-		
+
 		$("#cep").mask(cep_type,{completed:function(){
 			var ccep = $.trim($("#cep").val());
 			if(ccep == ''){
 				return false;
 			}
-			
+
 			var loaderContainer = $( '<span/>', {
 				 'class': 'loader-image-container'
 				,'id'	: 'ajax-img'
@@ -108,9 +108,9 @@
 				src: inlocation_def.path_admin + 'images/loading.gif',
 				'class': 'loader-image'
 			}).appendTo( loaderContainer );
-		
-			
-			
+
+
+
 			$.ajax({
 				 url: ajaxurl
 				,type:'POST'
@@ -119,21 +119,19 @@
 					 action	: 'inlocation_endbycep'
 					,cep 	: $('#cep').val()
 				}
-				
+
 				,success: function(json){
-					// console.log(json);
+
 					$('#ajax-img').remove();
-					
-					if(json.logradouro == ''){
-						//Msg erro
-						pageTitle.after('<div id="msg-ajax" class="error"><p>' + inlocation_def.zip_not_found + '</p></div>');
-					} else {
-						// $('#cep')val();
-						$('#logr_end').val(json.tipo_logradouro + ' ' + json.logradouro);
-						$('#logr_bairro').val(json.bairro);
-						$('#logr_cidade').val(json.cidade);
-						$('#logr_estado').val(json.uf);
-						
+
+					// $('#cep')val();
+					$('#logr_end').val(json.logradouro);
+					$('#logr_bairro').val(json.bairro);
+					$('#logr_cidade').val(json.localidade);
+					$('#logr_estado').val(json.uf);
+
+
+					if(json.logradouro && json.logradouro !== ''){
 						$("#logr_nr").focus();
 					}
 				},error: function(json){
@@ -144,8 +142,8 @@
 				}
 			}); //End_ajax
 		}});
-		
+
 		$("#cep").focus();
-		
+
 	});
 })(jQuery);
